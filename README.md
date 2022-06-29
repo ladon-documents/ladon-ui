@@ -1,12 +1,12 @@
 # Ladon UI Bundler
 
-## Getting startet
+## Getting started
 ```bash
 npm i
 ```
 
 ## Bundle
-This script bundles all needed micro frontends from `node_modules` into a `dist` folder and generates a [zip](zipper.mjs)
+This script bundles all needed micro frontends from `node_modules` into a `dist` folder and generates a named [zip file](zipper.mjs)
 
 ```bash
 npm run bundle
