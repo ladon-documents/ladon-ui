@@ -5,6 +5,7 @@
   "description": "Bundles all needed ladon ui micro frontends",
   "main": "index.js",
   "scripts": {
+    "build": "npm run bundle",
     "bundle": "node index.js",
     "cleanup": "rimraf dist *.zip"
   },
