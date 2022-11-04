@@ -17,3 +17,8 @@ Deletes `dist` folder and any generated zip files
 ```bash
 npm run cleanup
 ```
+
+---
+
+### Further reading
+- [Publish your npm package from local machine](docs/local-npm-publish.md)
