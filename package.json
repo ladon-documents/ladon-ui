@@ -1,12 +1,12 @@
 {
-  "name": "ladon-ui-bundler",
+  "name": "ladon-frontend",
   "version": "0.1.0",
   "type": "module",
   "description": "Bundles all needed ladon ui micro frontends",
   "scripts": {
     "build": "npm run bundle",
     "bundle": "node index.js",
-    "cleanup": "rimraf dist *.zip"
+    "cleanup": "rimraf dist *.zip *.tgz"
   },
   "engines": {
     "node": "~16.0"
@@ -21,21 +21,21 @@
   "author": "Mind Consulting",
   "license": "ISC",
   "dependencies": {
-    "@mind/ladon-docmanager": "^0.3.64",
-    "@mind/ladon-global-dependencies": "^0.0.11",
-    "@mind/mf-ladon-auth-api": "^0.1.2",
-    "@mind/mf-ladon-buckets": "^0.5.3",
-    "@mind/mf-ladon-config": "^0.3.8",
-    "@mind/mf-ladon-dashboard": "^0.22.3",
-    "@mind/mf-ladon-docmanager": "^0.1.32",
-    "@mind/mf-ladon-login": "^0.5.0",
-    "@mind/mf-ladon-main-nav": "^0.6.0",
-    "@mind/mf-ladon-plugin": "^0.5.9",
-    "@mind/mf-ladon-share": "^0.4.9",
-    "@mind/mf-ladon-shared-files": "^0.0.1",
-    "@mind/mf-ladon-styles": "^0.30.2",
-    "@mind/mf-ladon-user-manager": "^0.19.3",
-    "@mind/mf-ladon-utility-api": "^0.9.9"
+    "@mind/ladon-docmanager": "latest",
+    "@mind/ladon-global-dependencies": "latest",
+    "@mind/mf-ladon-auth-api": "latest",
+    "@mind/mf-ladon-buckets": "latest",
+    "@mind/mf-ladon-config": "latest",
+    "@mind/mf-ladon-dashboard": "latest",
+    "@mind/mf-ladon-docmanager": "latest",
+    "@mind/mf-ladon-login": "latest",
+    "@mind/mf-ladon-main-nav": "latest",
+    "@mind/mf-ladon-plugin": "latest",
+    "@mind/mf-ladon-share": "latest",
+    "@mind/mf-ladon-shared-files": "latest",
+    "@mind/mf-ladon-styles": "latest",
+    "@mind/mf-ladon-user-manager": "latest",
+    "@mind/mf-ladon-utility-api": "latest"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
