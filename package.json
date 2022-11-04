@@ -12,6 +12,12 @@
   "engines": {
     "node": "~16.0"
   },
+  "files": [
+    "dist/",
+    "releasenotes.md",
+    "ladon-plugin.json",
+    "ladon-plugin.md"
+  ],
   "keywords": [],
   "author": "Mind Consulting",
   "license": "ISC",
@@ -36,5 +42,8 @@
     "archiver": "^5.3.1",
     "fs-extra": "^10.1.0",
     "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.mind-consulting.de/repository/npm-private/"
   }
 }

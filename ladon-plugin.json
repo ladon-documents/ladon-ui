@@ -1,0 +1,15 @@
+{
+  "$schema": "https://plugins.mind-consulting.de/plugin-def-1.0.1.schema.json",
+  "id": "mind/ladon-frontend",
+  "name": "Ladon Frontend",
+  "shortText": "Ladon Frontend",
+  "deployTarget": "/_ui/",
+  "descriptionFile": "ladon-plugin.md",
+  "type": "static-web",
+  "channel": ["beta", "stable"],
+  "category": ["ui"],
+  "vendor": {
+    "name": "Mind Consulting UG",
+    "url": "https://mind-consulting.de"
+  }
+}
