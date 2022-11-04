@@ -15,6 +15,7 @@
   "author": "Mind Consulting",
   "license": "ISC",
   "dependencies": {
+    "@mind/ladon-docmanager": "^0.3.64",
     "@mind/ladon-global-dependencies": "^0.0.11",
     "@mind/mf-ladon-auth-api": "^0.1.2",
     "@mind/mf-ladon-buckets": "^0.5.3",
@@ -27,8 +28,8 @@
     "@mind/mf-ladon-share": "^0.4.9",
     "@mind/mf-ladon-shared-files": "^0.0.1",
     "@mind/mf-ladon-styles": "^0.30.2",
-    "@mind/mf-ladon-uitility-api": "^0.9.8",
-    "@mind/mf-ladon-user-manager": "^0.19.3"
+    "@mind/mf-ladon-user-manager": "^0.19.3",
+    "@mind/mf-ladon-utility-api": "^0.9.9"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
