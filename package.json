@@ -1,6 +1,6 @@
 {
   "name": "ladon-ui-bundler",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Bundles all needed ladon ui micro frontends",
   "main": "index.js",
