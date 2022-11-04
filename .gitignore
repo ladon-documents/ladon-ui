@@ -6,7 +6,6 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-*.zip
 # dependencies
 /node_modules
 
@@ -21,6 +20,7 @@ speed-measure-plugin*.json
 .c9/
 *.launch
 *.zip
+*.tgz
 .settings/
 *.sublime-workspace
 
