@@ -1,3 +1,4 @@
+import fs from 'fs';
 import bundle from './bundler.mjs'
 import zipper from './zipper.mjs';
 
@@ -9,8 +10,18 @@ function printResponse(response) {
 	console.info(response);
 }
 
+function rimrafNodeModules(path) {
+	fs.readdirSync(path).forEach( mf => {
+		if (fs.existsSync(`${path}${mf}/node_modules`)) {
+			fs.rmSync(`${path}${mf}/node_modules`, {recursive: true})
+		}
+	})
+}
+
 try {
 	printResponse(await bundle.bundleAndSync(targetPath, destinationPath))
+	printResponse(`Next: clean up all unnecessary node_modules in ${destinationPath}`)
+	rimrafNodeModules(destinationPath)
 	printResponse(await zipper.zip(bundleZip))
 } catch (e) {
 	console.error(e)
