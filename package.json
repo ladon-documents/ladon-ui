@@ -5,8 +5,8 @@
   "description": "Bundles all needed ladon ui micro frontends",
   "scripts": {
     "build": "npm run bundle",
-    "bundle": "node index.js",
-    "cleanup": "rimraf dist *.zip *.tgz"
+    "bundle": "node -e 'import(\"./index.js\").then(module => module.run())'",
+    "cleanup": "node -e 'import(\"./index.js\").then(module => module.cleanup())'"
   },
   "engines": {
     "node": "~16.0"
@@ -39,8 +39,7 @@
   },
   "devDependencies": {
     "archiver": "^5.3.1",
-    "fs-extra": "^10.1.0",
-    "rimraf": "^3.0.2"
+    "fs-extra": "^10.1.0"
   },
   "publishConfig": {
     "registry": "https://nexus.mind-consulting.de/repository/npm-private/"
