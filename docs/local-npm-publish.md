@@ -13,9 +13,9 @@ password: ****
 email: info@mind-consulting.de
 ```
 
-## Publish
+## Pack and Publish
 ```bash
-npm publish
+npm pack && npm publish
 ```
 ## Logout
 ```bash
