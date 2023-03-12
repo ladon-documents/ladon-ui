@@ -34,10 +34,12 @@ function cleanup() {
     fs.rmSync(uploadsDir, { recursive: true });
   }
 
+  exec("rm *.zip");
+
   console.info(`All clean here`);
 }
 
-function requestTgz() {
+async function requestTgz() {
   const { dependencies } = packageJson;
 
   if (dependencies) {
@@ -60,17 +62,26 @@ function packCallback(payload) {
   throw payload;
 }
 
-async function run() {
+async function runNodeModules() {
   try {
-    // printResponse(await bundle.bundleAndSync(targetPath, destinationPath))
-    // printResponse(`Next: clean up all unnecessary node_modules in ${destinationPath}`)
-    // rimrafNodeModules(destinationPath)
-    // printResponse(await zipper.zip(bundleZip))
-    printResponse(requestTgz());
+    printResponse(await bundle.bundleAndSync(targetPath, destinationPath));
+    printResponse(
+      `Next: clean up all unnecessary node_modules in ${destinationPath}`
+    );
+    rimrafNodeModules(destinationPath);
+    printResponse(await zipper.zip(bundleZip));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function runTgz() {
+  try {
+    printResponse(await requestTgz());
     printResponse(await zipper.zip("uploads.zip", "./uploads"));
   } catch (e) {
     console.error(e);
   }
 }
 
-export { cleanup, run };
+export { cleanup, runNodeModules, runTgz };

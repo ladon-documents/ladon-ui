@@ -5,7 +5,8 @@
   "description": "Bundles all needed ladon ui micro frontends",
   "scripts": {
     "build": "npm run bundle",
-    "bundle": "node -e 'import(\"./index.js\").then(module => module.run())'",
+    "bundle:npm": "node -e 'import(\"./index.js\").then(module => module.runNodeModules())'",
+    "bundle:tgz": "node -e 'import(\"./index.js\").then(module => module.runTgz())'",
     "cleanup": "node -e 'import(\"./index.js\").then(module => module.cleanup())'"
   },
   "engines": {
