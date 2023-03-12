@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run bundle",
     "bundle": "node -e 'import(\"./index.js\").then(module => module.run())'",
+    "cleanup": "node -e 'import(\"./index.js\").then(module => module.cleanup())'"
   },
   "engines": {
     "node": "~16.0"
