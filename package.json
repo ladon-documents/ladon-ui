@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Bundles all needed ladon ui micro frontends",
   "scripts": {
-    "build": "npm run bundle",
+    "build": "npm run bundle:tgz",
     "bundle:npm": "node -e 'import(\"./index.js\").then(module => module.runNodeModules())'",
     "bundle:tgz": "node -e 'import(\"./index.js\").then(module => module.runTgz())'",
     "cleanup": "node -e 'import(\"./index.js\").then(module => module.cleanup())'"

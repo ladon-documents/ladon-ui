@@ -9,13 +9,20 @@ npm i
 This script bundles all needed micro frontends from `node_modules` into a `dist` folder and generates a named [zip file](zipper.mjs)
 
 ```bash
-npm run bundle
+npm run bundle:npm
+npm run bundle:tgz
 ```
 
 ## Cleanup
 Deletes `dist` folder and any generated zip files
 ```bash
 npm run cleanup
+```
+
+## Download for local usage
+
+```bash
+npm pack @mind/ladon-frontend-bundler
 ```
 
 ---
