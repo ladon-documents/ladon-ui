@@ -1,5 +1,5 @@
 {
-  "name": "ladon-frontend",
+  "name": "@mind/ladon-frontend-bundler",
   "version": "0.3.0",
   "type": "module",
   "description": "Bundles all needed ladon ui micro frontends",
@@ -13,7 +13,8 @@
     "node": "~16.0"
   },
   "files": [
-    "dist/",
+    "upload/",
+    "upload.zip",
     "releasenotes.md",
     "ladon-plugin.json",
     "ladon-plugin.md"

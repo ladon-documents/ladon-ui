@@ -7,7 +7,7 @@ import { exec } from "child_process";
 const targetPath = "./node_modules/@mind";
 const destinationPath = "./dist/root/core-mf/";
 const bundleZip = "bundle.zip";
-const uploadsDir = "uploads";
+const uploadsDir = "upload";
 
 function printResponse(response) {
   console.info(response);
@@ -55,7 +55,7 @@ async function requestTgz() {
 
 function packCallback(payload) {
   if (payload == null) {
-    exec("mv *.tgz uploads");
+    exec(`mv *.tgz ${uploadsDir}`);
     return;
   }
 
@@ -78,7 +78,7 @@ async function runNodeModules() {
 async function runTgz() {
   try {
     printResponse(await requestTgz());
-    printResponse(await zipper.zip("uploads.zip", "./uploads"));
+    printResponse(await zipper.zip("upload.zip", uploadsDir));
   } catch (e) {
     console.error(e);
   }
