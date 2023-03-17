@@ -30,36 +30,43 @@ function cleanup() {
     fs.rmSync(bundleZip);
   }
 
+  if (fs.existsSync("tgz.zip")) {
+    fs.rmSync("tgz.zip");
+  }
+
   if (fs.existsSync(uploadsDir)) {
     fs.rmSync(uploadsDir, { recursive: true });
   }
 
   exec("rm *.zip");
+  exec("rm *.tgz");
 
   console.info(`All clean here`);
 }
 
-async function requestTgz() {
+function requestTgz() {
+  const promises = [];
   const { dependencies } = packageJson;
 
   if (dependencies) {
-    if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir);
-    }
+    Object.entries(dependencies).forEach(([key, value]) => {
+      promises.push(
+        new Promise((resolve, reject) => {
+          exec(`npm pack ${key}@${value.slice(1)}`, (payload) => {
+            if (payload == null) {
+              resolve(payload);
+            }
 
-    Object.keys(dependencies).forEach((key) => {
-      exec(`npm pack ${key}`, packCallback);
+            reject(payload);
+          });
+        })
+      );
     });
-  }
-}
 
-function packCallback(payload) {
-  if (payload == null) {
-    exec(`mv *.tgz ${uploadsDir}`);
-    return;
+    return promises;
   }
 
-  throw payload;
+  return promises;
 }
 
 async function runNodeModules() {
@@ -77,8 +84,8 @@ async function runNodeModules() {
 
 async function runTgz() {
   try {
-    printResponse(await requestTgz());
-    printResponse(await zipper.zip("upload.zip", uploadsDir));
+    await Promise.all(requestTgz());
+    exec(`zip tgz.zip *.tgz`);
   } catch (e) {
     console.error(e);
   }
