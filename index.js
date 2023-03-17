@@ -85,7 +85,7 @@ async function runNodeModules() {
 async function runTgz() {
   try {
     await Promise.all(requestTgz());
-    exec(`zip tgz.zip *.tgz`);
+    exec(`zip ui.zip *.tgz`);
   } catch (e) {
     console.error(e);
   }
