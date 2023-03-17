@@ -14,7 +14,7 @@ npm run bundle:tgz
 ```
 
 ## Cleanup
-Deletes `dist` folder and any generated zip files
+Deletes `dist` folder and any generated files
 ```bash
 npm run cleanup
 ```
@@ -29,3 +29,4 @@ npm pack @mind/ladon-frontend-bundler
 
 ### Further reading
 - [Publish your npm package from local machine](docs/local-npm-publish.md)
+- [Semantic commits](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
