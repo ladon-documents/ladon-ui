@@ -10,7 +10,7 @@
     "cleanup": "node -e 'import(\"./index.js\").then(module => module.cleanup())'"
   },
   "engines": {
-    "node": "~16.0"
+    "node": "~18.0"
   },
   "files": [
     "upload/",
