@@ -83,9 +83,10 @@ async function runNodeModules() {
 }
 
 async function runTgz() {
+  const { version } = packageJson
   try {
     await Promise.all(requestTgz());
-    exec(`zip ui.zip *.tgz`);
+    exec(`zip ui_${version}.zip *.tgz`);
   } catch (e) {
     console.error(e);
   }
