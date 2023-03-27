@@ -23,7 +23,6 @@
   "author": "Mind Consulting",
   "license": "ISC",
   "dependencies": {
-    "@mind/ladon-docmanager": "^0.3.64",
     "@mind/ladon-global-dependencies": "^0.0.11",
     "@mind/mf-ladon-auth-api": "^0.1.2",
     "@mind/mf-ladon-buckets": "^0.6.5",
