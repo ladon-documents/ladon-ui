@@ -1,3 +1,7 @@
+## 0.7.0 - 06.04.2023
+
+Updating all major package to latest
+
 ## 0.4.0 - 13.03.2023
 
 The new version runs downloads and creates a `upload` folder including all needed plugins for new ladon instance setup
