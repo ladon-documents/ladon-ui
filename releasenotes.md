@@ -1,3 +1,7 @@
+## 0.8.0 - 06.04.2023
+
+Add `wc-ladon-pdfviewer` to bundler
+
 ## 0.7.1 - 06.04.2023
 
 Bump some minor package versions, add `@mind/mf-ladon-static-page`
