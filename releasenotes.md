@@ -1,3 +1,7 @@
+## 0.7.1 - 06.04.2023
+
+Bump some minor package versions, add `@mind/mf-ladon-static-page`
+
 ## 0.7.0 - 06.04.2023
 
 Updating all major package to latest
