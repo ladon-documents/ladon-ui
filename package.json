@@ -1,6 +1,6 @@
 {
   "name": "@mind/ladon-frontend-bundler",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "type": "module",
   "description": "Bundles all needed ladon ui micro frontends",
   "scripts": {
