@@ -24,6 +24,7 @@
   "license": "ISC",
   "dependencies": {
     "@mind/ladon-global-dependencies": "^0.0.13",
+    "@mind/ladon-icon-pack": "^0.0.9",
     "@mind/mf-ladon-auth-api": "^0.1.2",
     "@mind/mf-ladon-buckets": "^0.7.3",
     "@mind/mf-ladon-config": "^0.4.3",
