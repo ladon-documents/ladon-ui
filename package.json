@@ -39,7 +39,7 @@
     "@mind/mf-ladon-styles": "^0.37.0",
     "@mind/mf-ladon-user-manager": "^0.22.5",
     "@mind/mf-ladon-utility-api": "^0.12.0",
-    "@mind/wc-ladon-pdfviewer": "^0.0.10"
+    "@mind/wc-ladon-pdfviewer": "^0.0.11"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
