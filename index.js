@@ -86,7 +86,7 @@ async function runTgz() {
   const { version } = packageJson
   try {
     await Promise.all(requestTgz());
-    exec(`zip ui_${version.replace('.', '_')}.zip *.tgz`);
+    exec(`zip ui_${version.replaceAll('.', '_')}.zip *.tgz`);
   } catch (e) {
     console.error(e);
   }
