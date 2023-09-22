@@ -28,7 +28,7 @@
     "@mind/mf-ladon-auth-api": "^1.0.0",
     "@mind/mf-ladon-buckets": "^1.0.0",
     "@mind/mf-ladon-config": "^1.0.0",
-    "@mind/mf-ladon-dashboard": "^1.0.0",
+    "@mind/mf-ladon-dashboard": "^1.0.1",
     "@mind/mf-ladon-docmanager": "^1.0.0",
     "@mind/mf-ladon-login": "^1.0.0",
     "@mind/mf-ladon-main-nav": "^1.0.0",
@@ -39,7 +39,7 @@
     "@mind/mf-ladon-styles": "^1.0.0",
     "@mind/mf-ladon-user-manager": "^1.0.0",
     "@mind/mf-ladon-utility-api": "^1.0.0",
-    "@mind/wc-ladon-pdfviewer": "^1.0.0"
+    "@mind/wc-ladon-pdfviewer": "^1.0.1"
   },
   "devDependencies": {
     "archiver": "^5.3.1",
